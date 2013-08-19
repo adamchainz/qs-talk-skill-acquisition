@@ -1,4 +1,4 @@
-qs-talk-skill-acquisition
-=========================
+QS Talk : Skill Acquisition
+===========================
 
-Talk for Quantified Self on Skill Acquisition
+This is my talk for Quantified Self on Skill Acquisition. Slides are in TeX format and the pdf is here too - check it out.

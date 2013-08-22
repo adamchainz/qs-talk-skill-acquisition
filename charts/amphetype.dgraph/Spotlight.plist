@@ -3,11 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>Labels</key>
-	<string>Performance (WPM)
+	<string>Performance with practice time
 Date
+Minutes spent practicing
 WPM
-Alone
-wpm vs datetime
+WPM vs datetime
+Fit of WPM vs datetime
 </string>
 	<key>Text</key>
 	<string></string>

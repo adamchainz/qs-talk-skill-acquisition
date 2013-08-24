@@ -3,12 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Labels</key>
-	<string>Amphetype Performance vs Practice Time per Day
-Date
-Minutes spent practicing
+	<string>Type-Fu Stats
+Session
 WPM
-WPM vs datetime
-Fit of WPM vs datetime
+WPM vs #
 </string>
 	<key>Text</key>
 	<string></string>

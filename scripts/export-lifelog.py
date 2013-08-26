@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 # coding=utf-8
-from dateutil import parser
-from datetime import datetime
 import subprocess
+import sys
+from dateutil import parser
+from datetime import datetime, timedelta
 
 
 BEGIN = datetime(2013, 7, 24)
 END = datetime(2013, 8, 28)
 
 
-def export():
+def export(print_total):
     command = [
         'lifelog',
         'bucket',
@@ -31,12 +32,18 @@ def export():
     for row in cleaned_rows:
         row[0] = row[0].date()
 
-    cleaned_rows = ["\t".join([str(r) for r in row])
-                    for row in cleaned_rows]
+    if not print_total:
 
-    print "\n".join(cleaned_rows)
+        cleaned_rows = ["\t".join([str(r) for r in row])
+                        for row in cleaned_rows]
 
+        print "\n".join(cleaned_rows)
+
+    else:
+        total_minutes = sum([int(r[1]) for r in cleaned_rows])
+        print timedelta(minutes=total_minutes)
 
 if __name__ == '__main__':
-    export()
+    print_total = (sys.argv[1] == '--total')
+    export(print_total)
 

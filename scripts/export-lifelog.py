@@ -44,6 +44,6 @@ def export(print_total):
         print timedelta(minutes=total_minutes)
 
 if __name__ == '__main__':
-    print_total = (sys.argv[1] == '--total')
+    print_total = (len(sys.argv) > 1 and sys.argv[1] == '--total')
     export(print_total)
 
